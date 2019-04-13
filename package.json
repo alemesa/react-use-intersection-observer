@@ -4,6 +4,8 @@
   "description": "React Hook that uses the intersection observer API",
   "main": "index.js",
   "scripts": {
+    "major": "npm version major",
+    "minor": "npm version minor",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "@alemesa/react-use-intersection-observer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Hook that uses the intersection observer API",
   "main": "index.js",
   "scripts": {

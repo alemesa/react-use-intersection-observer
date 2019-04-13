@@ -6,7 +6,7 @@
 
 [![NPM](https://nodeico.herokuapp.com/@alemesa/react-use-intersection-observer.svg)](https://npmjs.com/package/@alemesa/react-use-intersection-observer)
 
-React Hook that uses the intersection observer API
+[React Hook](https://reactjs.org/docs/hooks-intro.html) that uses the intersection observer API
 
 #### Usage
 

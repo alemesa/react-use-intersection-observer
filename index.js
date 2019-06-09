@@ -1,39 +1,52 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
- /**
+const INTERSECTION_OBSERVER_CONFIG = {
+  threshold: 0.0,
+  triggerOnce: true,
+  rootMargin: "-150px"
+};
+
+/**
  * React hook that return is the object is intersected
  */
-function useIntersectionObserver(ref, threshold = 1.0, rootMargin = '0px', rootRef = null) {
+function useIntersectionObserver(ref, config = {}, rootRef = null) {
   const [isIntersecting, setIntersecting] = useState(false);
 
-   const options = {
-    root: rootRef,
-    threshold: threshold,
-    rootMargin: rootMargin
+  const options = {
+    root: rootRef && rootRef.current,
+    ...INTERSECTION_OBSERVER_CONFIG,
+    ...config
   };
 
-   /**
-   * Intersection Callback
-   */
-  function intersectionCallBack(entries) {
-    if (entries[0].isIntersecting) {
-      setIntersecting(true);
-    }
-  }
+  useEffect(() => {
+    const observer = new IntersectionObserver(function(entries) {
+      if (options.triggerOnce) {
+        if (entries[0].isIntersecting) {
+          setIntersecting(true);
+          observer.unobserve(ref.current);
+        }
+      } else {
+        setIntersecting(entries[0].isIntersecting);
+      }
+    }, options);
 
-   useEffect(() => {
-    const observer = new IntersectionObserver(intersectionCallBack, options);
     if (!ref) {
-        console.warn(`No target specified - use useRef() hook to pass the target value`);
-        return;
+      console.warn(
+        `No target specified - use useRef() hook to pass the target value`
+      );
+      return;
     }
-    observer.observe(ref.current);
-    return () => {
-      observer.unobserve(ref.current);
-    };
-  }, []);
 
-   return isIntersecting;
+    const { current } = ref;
+
+    observer.observe(current);
+
+    return () => {
+      if (current) observer.unobserve(current);
+    };
+  }, [options, ref, options.triggerOnce]);
+
+  return isIntersecting;
 }
 
- export default useIntersectionObserver;
+export default useIntersectionObserver;

@@ -14,9 +14,14 @@
 npm i @alemesa/react-use-intersection-observer
 ```
 
+---
+
+- Simple Example:
+  Element will trigger a single time and unobserve
+
 ```javascript
-import React, { useRef, useEffect } from 'react';
-import useIntersectionObserver from '@alemesa/react-use-intersection-observer';
+import React, { useRef, useEffect } from "react";
+import useIntersectionObserver from "@alemesa/react-use-intersection-observer";
 
 const Paragraph = React.memo(() => {
   const elRef = useRef(null);
@@ -27,9 +32,40 @@ const Paragraph = React.memo(() => {
   useEffect(() => {
     if (intersected) {
       // Intersected - do whatever you want
-      console.log('Intersected element');
+      console.log("Intersected element");
     }
+  }, [intersected]);
+
+  return <h3 ref={elRef}>Example</h3>;
+});
+
+export default Paragraph;
+```
+
+---
+
+- Custom Example:
+  Element will trigger multiple time
+
+```javascript
+import React, { useRef, useEffect } from "react";
+import useIntersectionObserver from "@alemesa/react-use-intersection-observer";
+
+const Paragraph = React.memo(() => {
+  const elRef = useRef(null);
+
+  // Pass a reference to the custom hook
+  const intersected = useIntersectionObserver(elRef, {
+    triggerOnce: false,
+    threshold: 0.3
   });
+
+  useEffect(() => {
+    if (intersected) {
+      // Intersected - do whatever you want
+      console.log("Intersected element");
+    }
+  }, [intersected]);
 
   return <h3 ref={elRef}>Example</h3>;
 });

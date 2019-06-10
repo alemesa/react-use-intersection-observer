@@ -1,5 +1,5 @@
 # react-use-intersection-observer
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 [![Version](https://badge.fury.io/js/%40alemesa%2Freact-use-intersection-observer.svg)](https://badge.fury.io/js/%40alemesa%2Freact-use-intersection-observer)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
@@ -80,7 +80,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://alemesa.com"><img src="https://avatars3.githubusercontent.com/u/14832910?v=4" width="100px;" alt="Alejandro Mesa"/><br /><sub><b>Alejandro Mesa</b></sub></a><br /><a href="#infra-alemesa" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/alemesa/react-use-intersection-observer/commits?author=alemesa" title="Code">💻</a></td></tr></table>
+<table><tr><td align="center"><a href="https://alemesa.com"><img src="https://avatars3.githubusercontent.com/u/14832910?v=4" width="100px;" alt="Alejandro Mesa"/><br /><sub><b>Alejandro Mesa</b></sub></a><br /><a href="#infra-alemesa" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/alemesa/react-use-intersection-observer/commits?author=alemesa" title="Code">💻</a></td><td align="center"><a href="https://github.com/DonghyukJacobJang"><img src="https://avatars2.githubusercontent.com/u/16929537?v=4" width="100px;" alt="Donghyuk (Jacob) Jang"/><br /><sub><b>Donghyuk (Jacob) Jang</b></sub></a><br /><a href="https://github.com/alemesa/react-use-intersection-observer/commits?author=DonghyukJacobJang" title="Code">💻</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

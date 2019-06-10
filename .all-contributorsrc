@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "alemesa",
+      "name": "Alejandro Mesa",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/14832910?v=4",
+      "profile": "https://alemesa.com",
+      "contributions": [
+        "infra",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-use-intersection-observer",
+  "projectOwner": "alemesa",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}

@@ -1,4 +1,5 @@
 # react-use-intersection-observer
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
 [![Version](https://badge.fury.io/js/%40alemesa%2Freact-use-intersection-observer.svg)](https://badge.fury.io/js/%40alemesa%2Freact-use-intersection-observer)
@@ -17,6 +18,12 @@ npm i @alemesa/react-use-intersection-observer
 
 ---
 
+- Example Codesanbox:
+
+[![Edit react-use-intersection-observer](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/smoosh-wave-4ojbk?fontsize=14)
+
+---
+
 - Simple Example:
   Element will trigger a single time and unobserve
 
@@ -24,7 +31,7 @@ npm i @alemesa/react-use-intersection-observer
 import React, { useRef, useEffect } from "react";
 import useIntersectionObserver from "@alemesa/react-use-intersection-observer";
 
-const Paragraph = React.memo(() => {
+const Header = React.memo(() => {
   const elRef = useRef(null);
 
   // Pass a reference to the custom hook
@@ -40,7 +47,7 @@ const Paragraph = React.memo(() => {
   return <h3 ref={elRef}>Example</h3>;
 });
 
-export default Paragraph;
+export default Header;
 ```
 
 ---
@@ -52,13 +59,14 @@ export default Paragraph;
 import React, { useRef, useEffect } from "react";
 import useIntersectionObserver from "@alemesa/react-use-intersection-observer";
 
-const Paragraph = React.memo(() => {
+const Header = React.memo(() => {
   const elRef = useRef(null);
 
-  // Pass a reference to the custom hook
+  // Pass a reference to the custom hook and custom options
   const intersected = useIntersectionObserver(elRef, {
     triggerOnce: false,
-    threshold: 0.3
+    threshold: 0.3,
+    rootMargin: "-150px"
   });
 
   useEffect(() => {
@@ -71,7 +79,7 @@ const Paragraph = React.memo(() => {
   return <h3 ref={elRef}>Example</h3>;
 });
 
-export default Paragraph;
+export default Header;
 ```
 
 ## Contributors

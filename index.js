@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const INTERSECTION_OBSERVER_CONFIG = {
   threshold: 0.0,
   triggerOnce: true,
-  rootMargin: "-150px"
+  rootMargin: "0px"
 };
 
 /**
